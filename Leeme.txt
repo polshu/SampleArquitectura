@@ -1,0 +1,3 @@
+.- Restores NuGet PAckages
+Update-Package -reinstall
+Update-Package -reinstall -Project YourProjectName
