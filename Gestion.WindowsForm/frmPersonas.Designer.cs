@@ -1,5 +1,5 @@
 ﻿namespace Gestion.WindowsForm {
-    partial class Form1 {
+    partial class frmPersonas {
         /// <summary>
         /// Required designer variable.
         /// </summary>

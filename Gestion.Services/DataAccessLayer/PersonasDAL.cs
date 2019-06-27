@@ -28,7 +28,7 @@ namespace Gestion.Services {
                     }
                 }
             } catch (Exception ex) {
-                Log.LogException(ex);
+                CustomLog.LogException(ex);
             }
 
             DatabaseHelper.CloseAndDisposeReader(ref currentReader);
@@ -56,7 +56,7 @@ namespace Gestion.Services {
                     }
                 }
             } catch (Exception ex) {
-                Log.LogException(ex);
+                CustomLog.LogException(ex);
             }
 
             DatabaseHelper.CloseAndDisposeReader(ref currentReader);
@@ -76,7 +76,7 @@ namespace Gestion.Services {
             try {
                 intNewId = DatabaseHelper.ExecuteNonQuery("Personas_Insert", parameterArray);
             } catch (Exception ex) {
-                Log.LogException(ex);
+                CustomLog.LogException(ex);
             }
 
             return intNewId;
@@ -96,7 +96,7 @@ namespace Gestion.Services {
                 currentObject = DatabaseHelper.ExecuteScalar("Personas_InsertScalar", parameterArray);
                 intNewId = Convert.ToInt32(currentObject);
             } catch (Exception ex) {
-                Log.LogException(ex);
+                CustomLog.LogException(ex);
             }
 
             return intNewId;
@@ -116,7 +116,7 @@ namespace Gestion.Services {
                     }
                 }
             } catch (Exception ex) {
-                Log.LogException(ex);
+                CustomLog.LogException(ex);
             }
 
             DatabaseHelper.CloseAndDisposeReader(ref currentReader);

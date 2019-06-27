@@ -9,7 +9,7 @@ using Gestion.Entities;
 using Helpers;
 
 namespace Gestion.Services {
-    public class Log {
+    public class CustomLog {
         public static string GetLogFile() {
             string strReturnValue;
             strReturnValue = AppSettingsHelper.GetAppSetting("LogFile", "");
@@ -29,7 +29,7 @@ namespace Gestion.Services {
             string  strPathFile;
             string  strTextToLog;
 
-            strPathFile = Log.GetLogFile();
+            strPathFile = CustomLog.GetLogFile();
 
             if (!string.IsNullOrEmpty(strPathFile)) {
                 strTextToLog = string.Format("{0} {1}{2}",
