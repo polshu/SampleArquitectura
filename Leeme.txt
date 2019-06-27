@@ -11,6 +11,13 @@ Update-Package -reinstall -Project YourProjectName
 .- Ver la Arquitectura y las referencias y que es comun a todo!.
 .- Por que se usa Gestion.Services.DataAccessLayer (internal class PersonasDAL).
 .- Ver como se resolvio el tema de los LOGS! (se utilizo un Custom Log).
-.- Ver como se resolvio el tema del Insert para saber su ultimo Id Insertado. (Insert / insertScalar).
+.- Ver como se resolvio el tema de retorno de Id del StoredProcedure.
+.- Ver como se resolvio el tema del Insert para saber su ultimo Id Insertado. (Insert / insertScalar / InsertValid).
 .- Ver como se resolvio el tema de la validacion unica. (InsertScalar (out string...))
-.- VEr como GetActivos() y GetInActivos() llaman internamente a un mismo Metodo.
+.- Ver como GetActivos() y GetInActivos() llaman internamente a un mismo Metodo.
+
+RestClient: ejemplos y diferentes formas.
+https://code-maze.com/different-ways-consume-restful-api-csharp/
+
+RestClient: Sample (con deserializacion)
+https://stackoverflow.com/questions/9620278/how-do-i-make-calls-to-a-rest-api-using-c

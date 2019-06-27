@@ -13,7 +13,7 @@ namespace Gestion.WindowsForm {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPersonas());
+            Application.Run(new MDIPrincipal());
         }
     }
 }

@@ -46,16 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmPersonasProxy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonasProxy.Designer.cs">
+      <DependentUpon>frmPersonasProxy.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPersonas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPersonas.Designer.cs">
       <DependentUpon>frmPersonas.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIPrincipal.Designer.cs">
+      <DependentUpon>MDIPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmPersonasProxy.resx">
+      <DependentUpon>frmPersonasProxy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPersonas.resx">
       <DependentUpon>frmPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIPrincipal.resx">
+      <DependentUpon>MDIPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,6 +101,10 @@
     <ProjectReference Include="..\Gestion.Entities\Gestion.Entities.csproj">
       <Project>{a4a8247b-db92-4223-8fa1-9d977048ad48}</Project>
       <Name>Gestion.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gestion.Proxy\Gestion.Proxy.csproj">
+      <Project>{8e372894-52ee-4e96-a69a-e6dfaac3de4d}</Project>
+      <Name>Gestion.Proxy</Name>
     </ProjectReference>
     <ProjectReference Include="..\Gestion.Services\Gestion.Services.csproj">
       <Project>{2621870a-386e-47ff-a6b3-49eb7fe53138}</Project>
