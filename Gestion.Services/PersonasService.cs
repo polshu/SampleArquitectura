@@ -30,7 +30,6 @@ namespace Gestion.Services {
             return returnList;
         }
 
-
         public static List<Persona> GetActivos() {
             List<Persona>   returnList = new List<Persona>();
             PersonasDAL     currentDAL = GetDAL();
@@ -50,10 +49,53 @@ namespace Gestion.Services {
         }
 
         public static int Insert(Persona newEntity) {
+            int         intNewId;
             PersonasDAL currentDAL = GetDAL();
 
-            //return currentDAL.Insert(newEntity);
-            return currentDAL.InsertScalar(newEntity);
+            intNewId = currentDAL.Insert(newEntity);
+            return intNewId;
+        }
+
+        public static int InsertScalar(Persona newEntity) {
+            int         intNewId;
+            PersonasDAL currentDAL = GetDAL();
+
+            intNewId = currentDAL.InsertScalar(newEntity);
+            return intNewId;
+        }
+
+        public static int InsertValid(Persona newEntity, out string strErrores) {
+            int         intNewId = 0;
+            PersonasDAL currentDAL = GetDAL();
+
+            if (IsValid(newEntity, out strErrores)) {
+                intNewId = currentDAL.InsertScalar(newEntity);
+            }
+
+            return intNewId;
+        }
+
+        public static bool IsValid(Persona testEntity, out string strErrores) {
+            bool blnReturnValue = true;
+            strErrores = "";
+
+            if (testEntity != null) {
+                // Valido el nombre.
+                if (testEntity.Nombre.Trim().Length == 0) {
+                    strErrores += "El nombre es invalido.";
+                    blnReturnValue = false;
+                }
+
+                // Valido el email, si lo puso quye haya puesto un arroba.
+                if ((testEntity.Email.Trim().Length > 0) && (!testEntity.Email.Contains("@"))) {
+                    strErrores += "Falta el arroba en el email.";
+                    blnReturnValue = false;
+                }
+            } else {
+                strErrores += "El objeto es NULL!!";
+                blnReturnValue = false;
+            }
+            return blnReturnValue;
         }
     }
 }

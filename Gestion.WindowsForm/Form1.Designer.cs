@@ -24,19 +24,19 @@
         /// </summary>
         private void InitializeComponent() {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvPersonas = new System.Windows.Forms.DataGridView();
-            this.btnPersonasGetAll = new System.Windows.Forms.Button();
-            this.btnPersonasGetActivos = new System.Windows.Forms.Button();
-            this.btnPersonasGetInactivos = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.chkActivo = new System.Windows.Forms.CheckBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnInsert = new System.Windows.Forms.Button();
             this.txtPersonaOutput = new System.Windows.Forms.TextBox();
             this.txtPersonaId = new System.Windows.Forms.TextBox();
             this.btnGetById = new System.Windows.Forms.Button();
-            this.btnInsert = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.chkActivo = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnPersonasGetInactivos = new System.Windows.Forms.Button();
+            this.btnPersonasGetActivos = new System.Windows.Forms.Button();
+            this.btnPersonasGetAll = new System.Windows.Forms.Button();
+            this.dgvPersonas = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.SuspendLayout();
@@ -63,46 +63,60 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PersonasService";
             // 
-            // dgvPersonas
+            // label2
             // 
-            this.dgvPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPersonas.Location = new System.Drawing.Point(6, 53);
-            this.dgvPersonas.Name = "dgvPersonas";
-            this.dgvPersonas.Size = new System.Drawing.Size(642, 245);
-            this.dgvPersonas.TabIndex = 0;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(387, 363);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Email";
             // 
-            // btnPersonasGetAll
+            // label1
             // 
-            this.btnPersonasGetAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonasGetAll.Location = new System.Drawing.Point(6, 24);
-            this.btnPersonasGetAll.Name = "btnPersonasGetAll";
-            this.btnPersonasGetAll.Size = new System.Drawing.Size(210, 23);
-            this.btnPersonasGetAll.TabIndex = 1;
-            this.btnPersonasGetAll.Text = "GetAll";
-            this.btnPersonasGetAll.UseVisualStyleBackColor = true;
-            this.btnPersonasGetAll.Click += new System.EventHandler(this.btnPersonasGetAll_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(387, 337);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Nombre";
             // 
-            // btnPersonasGetActivos
+            // chkActivo
             // 
-            this.btnPersonasGetActivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonasGetActivos.Location = new System.Drawing.Point(222, 24);
-            this.btnPersonasGetActivos.Name = "btnPersonasGetActivos";
-            this.btnPersonasGetActivos.Size = new System.Drawing.Size(210, 23);
-            this.btnPersonasGetActivos.TabIndex = 2;
-            this.btnPersonasGetActivos.Text = "GetActivos";
-            this.btnPersonasGetActivos.UseVisualStyleBackColor = true;
-            this.btnPersonasGetActivos.Click += new System.EventHandler(this.btnPersonasGetActivos_Click);
+            this.chkActivo.AutoSize = true;
+            this.chkActivo.Location = new System.Drawing.Point(437, 385);
+            this.chkActivo.Name = "chkActivo";
+            this.chkActivo.Size = new System.Drawing.Size(56, 17);
+            this.chkActivo.TabIndex = 10;
+            this.chkActivo.Text = "Activo";
+            this.chkActivo.UseVisualStyleBackColor = true;
             // 
-            // btnPersonasGetInactivos
+            // txtEmail
             // 
-            this.btnPersonasGetInactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonasGetInactivos.Location = new System.Drawing.Point(438, 24);
-            this.btnPersonasGetInactivos.Name = "btnPersonasGetInactivos";
-            this.btnPersonasGetInactivos.Size = new System.Drawing.Size(210, 23);
-            this.btnPersonasGetInactivos.TabIndex = 3;
-            this.btnPersonasGetInactivos.Text = "GetInactivos";
-            this.btnPersonasGetInactivos.UseVisualStyleBackColor = true;
-            this.btnPersonasGetInactivos.Click += new System.EventHandler(this.btnPersonasGetInactivos_Click);
+            this.txtEmail.Location = new System.Drawing.Point(437, 359);
+            this.txtEmail.MaxLength = 320;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(210, 20);
+            this.txtEmail.TabIndex = 9;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(437, 333);
+            this.txtNombre.MaxLength = 150;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(210, 20);
+            this.txtNombre.TabIndex = 8;
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.Location = new System.Drawing.Point(437, 306);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(209, 23);
+            this.btnInsert.TabIndex = 7;
+            this.btnInsert.Text = "Insert";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // txtPersonaOutput
             // 
@@ -132,60 +146,46 @@
             this.btnGetById.UseVisualStyleBackColor = true;
             this.btnGetById.Click += new System.EventHandler(this.btnGetById_Click);
             // 
-            // btnInsert
+            // btnPersonasGetInactivos
             // 
-            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(437, 306);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(209, 23);
-            this.btnInsert.TabIndex = 7;
-            this.btnInsert.Text = "Insert";
-            this.btnInsert.UseVisualStyleBackColor = true;
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            this.btnPersonasGetInactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonasGetInactivos.Location = new System.Drawing.Point(438, 24);
+            this.btnPersonasGetInactivos.Name = "btnPersonasGetInactivos";
+            this.btnPersonasGetInactivos.Size = new System.Drawing.Size(210, 23);
+            this.btnPersonasGetInactivos.TabIndex = 3;
+            this.btnPersonasGetInactivos.Text = "GetInactivos";
+            this.btnPersonasGetInactivos.UseVisualStyleBackColor = true;
+            this.btnPersonasGetInactivos.Click += new System.EventHandler(this.btnPersonasGetInactivos_Click);
             // 
-            // txtNombre
+            // btnPersonasGetActivos
             // 
-            this.txtNombre.Location = new System.Drawing.Point(437, 333);
-            this.txtNombre.MaxLength = 150;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(210, 20);
-            this.txtNombre.TabIndex = 8;
+            this.btnPersonasGetActivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonasGetActivos.Location = new System.Drawing.Point(222, 24);
+            this.btnPersonasGetActivos.Name = "btnPersonasGetActivos";
+            this.btnPersonasGetActivos.Size = new System.Drawing.Size(210, 23);
+            this.btnPersonasGetActivos.TabIndex = 2;
+            this.btnPersonasGetActivos.Text = "GetActivos";
+            this.btnPersonasGetActivos.UseVisualStyleBackColor = true;
+            this.btnPersonasGetActivos.Click += new System.EventHandler(this.btnPersonasGetActivos_Click);
             // 
-            // txtEmail
+            // btnPersonasGetAll
             // 
-            this.txtEmail.Location = new System.Drawing.Point(437, 359);
-            this.txtEmail.MaxLength = 320;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(210, 20);
-            this.txtEmail.TabIndex = 9;
+            this.btnPersonasGetAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonasGetAll.Location = new System.Drawing.Point(6, 24);
+            this.btnPersonasGetAll.Name = "btnPersonasGetAll";
+            this.btnPersonasGetAll.Size = new System.Drawing.Size(210, 23);
+            this.btnPersonasGetAll.TabIndex = 1;
+            this.btnPersonasGetAll.Text = "GetAll";
+            this.btnPersonasGetAll.UseVisualStyleBackColor = true;
+            this.btnPersonasGetAll.Click += new System.EventHandler(this.btnPersonasGetAll_Click);
             // 
-            // chkActivo
+            // dgvPersonas
             // 
-            this.chkActivo.AutoSize = true;
-            this.chkActivo.Location = new System.Drawing.Point(437, 385);
-            this.chkActivo.Name = "chkActivo";
-            this.chkActivo.Size = new System.Drawing.Size(56, 17);
-            this.chkActivo.TabIndex = 10;
-            this.chkActivo.Text = "Activo";
-            this.chkActivo.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(387, 337);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Nombre";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(387, 363);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Email";
+            this.dgvPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPersonas.Location = new System.Drawing.Point(6, 53);
+            this.dgvPersonas.Name = "dgvPersonas";
+            this.dgvPersonas.Size = new System.Drawing.Size(642, 245);
+            this.dgvPersonas.TabIndex = 0;
             // 
             // Form1
             // 
@@ -196,7 +196,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gestion.WindowsForm";
+            this.Text = "Gestion - WindowsForm";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

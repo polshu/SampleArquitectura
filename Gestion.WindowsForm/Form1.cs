@@ -61,13 +61,21 @@ namespace Gestion.WindowsForm {
         private void btnInsert_Click(object sender, EventArgs e) {
             Persona newPersona;
             int     intNewId;
+            string  strErrores = "";
 
             newPersona = new Persona();
             newPersona.Nombre   = txtNombre.Text;
-            newPersona.Nombre   = txtEmail.Text;
+            newPersona.Email    = txtEmail.Text;
             newPersona.Activo   = chkActivo.Checked;
-            intNewId = PersonasService.Insert(newPersona);
-
+            //intNewId = PersonasService.Insert(newPersona);
+            //intNewId = PersonasService.InsertScalar(newPersona);
+            intNewId = PersonasService.InsertValid(newPersona, out strErrores);
+            if (intNewId > 0) {
+                MessageBox.Show("Se inserto el ID:" + intNewId.ToString());
+            } else {
+                MessageBox.Show("Errores: " + strErrores );
+            }
+            
 
         }
     }
