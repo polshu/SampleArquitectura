@@ -1,0 +1,27 @@
+﻿@model Gestion.Entities.Persona
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="card col-6 offset-3">
+    <div class="card-header mt-2">
+        Persona Id: @Html.DisplayFor(model => model.Id)
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">@Html.DisplayNameFor(model => model.Nombre)</h5>
+        <p class="card-text">@Html.DisplayFor(model => model.Nombre)</p>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">@Html.DisplayNameFor(model => model.Email)</h5>
+        <p class="card-text">@Html.DisplayFor(model => model.Email)</p>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">@Html.DisplayNameFor(model => model.Activo)</h5>
+        <p class="card-text">@Html.DisplayFor(model => model.Activo)</p>
+    </div>
+    <div class="card-footer mt-2 mb-2">
+        @Html.ActionLink("Volver al listado", "Index")
+    </div>
+</div>
+

@@ -29,17 +29,13 @@
         <h4 class="mb-3">Persona</h4>
         <div class="row">
             <div class="col-md-6 mb-3">
-                
                 <label for="firstName">Nombre</label>
-                <%--<input type="text" maxlength="320" class="form-control" id="txtNombre1" placeholder="ingrese email" value="" >--%>
                 <asp:TextBox ID="txtNombre" runat="server" MaxLength="150" CssClass="form-control" placeholder="ingrese nombre"></asp:TextBox>
             </div>
             <div class="col-md-6 mb-3">
                 <label for="lastName">Email</label>
-                <%--<input type="text" maxlength="320" class="form-control" id="txtEmail1" placeholder="ingrese email" value="">--%>
                 <asp:TextBox ID="txtEmail" runat="server" maxlength="320" CssClass="form-control" placeholder="ingrese email"></asp:TextBox>
             </div>
-            
         </div>
                    
         <div class="custom-control custom-checkbox">
