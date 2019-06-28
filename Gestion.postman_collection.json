@@ -64,6 +64,62 @@
 					"response": []
 				},
 				{
+					"name": "Personas - GetActivos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/v1/personas/activos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"activos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Personas - GetInActivos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/api/v1/personas/inactivos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"inactivos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Personas - Insert",
 					"request": {
 						"method": "POST",
@@ -151,6 +207,64 @@
 								"api",
 								"v1",
 								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Personas - GetInActivos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:57868/api/v1/personas/inactivos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "57868",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"inactivos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Personas - GetInActivos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:57868/api/v1/personas/inactivos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "57868",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"inactivos"
 							]
 						}
 					},

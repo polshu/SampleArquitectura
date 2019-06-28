@@ -41,6 +41,32 @@ namespace Gestion.API.Controllers {
             return respuesta;
         }
 
+
+        [HttpGet]
+        [Route("api/v1/personas/activos")]
+        public IHttpActionResult GetActivos() {
+            IHttpActionResult respuesta;
+            List<Persona> personasList;
+
+            personasList = PersonasService.GetActivos();
+            respuesta = Ok(personasList);
+
+            return respuesta;
+        }
+
+        [HttpGet]
+        [Route("api/v1/personas/inactivos")]
+        public IHttpActionResult GetInActivos() {
+            IHttpActionResult respuesta;
+            List<Persona> personasList;
+
+            personasList = PersonasService.GetInActivos();
+            respuesta = Ok(personasList);
+
+            return respuesta;
+        }
+
+
         [HttpPost]
         [Route("api/v1/personas")]
         public IHttpActionResult Insert(Persona requestDTO) {
@@ -65,6 +91,8 @@ namespace Gestion.API.Controllers {
 
             return respuesta;
         }
+
+
         
     }
 }
