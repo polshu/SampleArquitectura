@@ -5,16 +5,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Helpers {
-    public class LogHelper {
+    /// <summary>
+    ///     Clase que agrupa funcionalidades de lectura y escritura de archivos.
+    /// </summary>
+    public class IOHelper {
+        /// <summary>
+        ///     Crea y guarda en el archivo de texto especificado los datos enviados.
+        /// </summary>
+        /// <param name="strPathFile"></param>
+        /// <param name="strData"></param>
+        /// <returns></returns>
         public static bool WriteToFile(string strPathFile, string strData) {
             return WriteToFileInternal(strPathFile, strData, FileMode.Create);
         }
 
+        //// <summary>
+        ///     Agrega en el archivo de texto especificado los datos enviados.
+        /// </summary>
+        /// <param name="strPathFile"></param>
+        /// <param name="strData"></param>
+        /// <returns></returns>
         public static bool AppendToFile(string strPathFile, string strData) {
             return WriteToFileInternal(strPathFile, strData, FileMode.Append);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="strPathFile"></param>
+        /// <param name="strData"></param>
+        /// <param name="fileMode"></param>
+        /// <returns></returns>
         private static bool WriteToFileInternal(string strPathFile, string strData, FileMode fileMode) {
             bool blnReturnValue = false;
             try {
@@ -28,6 +51,7 @@ namespace Helpers {
                 }
                 blnReturnValue = true;
             } catch {
+
             }
             return blnReturnValue;
         }

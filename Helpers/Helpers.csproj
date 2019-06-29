@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettingsHelper.cs" />
-    <Compile Include="LogHelper.cs" />
+    <Compile Include="IOHelper.cs" />
     <Compile Include="DatabaseHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

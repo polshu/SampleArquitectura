@@ -37,7 +37,7 @@ namespace Gestion.Services {
                     strData,
                     Environment.NewLine);
 
-                blnReturnValue = LogHelper.AppendToFile(strPathFile, strTextToLog);
+                blnReturnValue = IOHelper.AppendToFile(strPathFile, strTextToLog);
             }
             return blnReturnValue;
         }
