@@ -2,8 +2,6 @@
 Update-Package -reinstall
 Update-Package -reinstall -Project YourProjectName
 
-
-
 .- Ver los proyectos (Helpers).
 .- Ver el tema de la sobrecarga de metodos (Helpers y otras).
 .- Ver el tema del ToString() en Personas (overrides).
