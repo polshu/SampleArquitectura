@@ -7,8 +7,10 @@ using System.Web.Http;
 
 using Helpers;
 using Gestion.Entities;
+using Gestion.EntitiesDTO;
 using Gestion.API.Models;
 using Gestion.Services;
+using Gestion.Mappers;
 
 namespace Gestion.API.Controllers {
     public class PersonasController : ApiController {
@@ -32,11 +34,13 @@ namespace Gestion.API.Controllers {
         [HttpGet]
         [Route("api/v1/personas")]
         public IHttpActionResult GetAll() {
-            IHttpActionResult respuesta;
-            List<Persona> personasList;
+            IHttpActionResult   respuesta;
+            List<Persona>       personasList;
+            List<PersonaDTO>    personasDTOList;
 
             personasList    = PersonasService.GetAll();
-            respuesta       = Ok(personasList);
+            personasDTOList = PersonasMapper.ToDTOList(personasList);
+            respuesta       = Ok(personasDTOList);
 
             return respuesta;
         }

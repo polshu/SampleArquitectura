@@ -7,7 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Helpers;
-using Gestion.Entities;
+//using Gestion.Entities;
+using Gestion.EntitiesDTO;
 using Gestion.Proxy.Models;
 using Newtonsoft.Json;
 
@@ -20,8 +21,8 @@ namespace Gestion.Proxy {
             return strReturnValue;
         }
 
-        public static Persona GetById(int intId) {
-            Persona             returnEntity = null;
+        public static PersonaDTO GetById(int intId) {
+            PersonaDTO          returnEntity = null;
             string              strBaseAdressURL;
             HttpResponseMessage response;
 
@@ -34,7 +35,7 @@ namespace Gestion.Proxy {
 
                 response = client.GetAsync("api/v1/personas/" + intId.ToString()).Result;
                 if (response.IsSuccessStatusCode) {
-                    returnEntity = response.Content.ReadAsAsync<Persona>().Result;
+                    returnEntity = response.Content.ReadAsAsync<PersonaDTO>().Result;
                 }
                 //client.Dispose();
             }
@@ -42,8 +43,8 @@ namespace Gestion.Proxy {
             return returnEntity;
         }
 
-        public static List<Persona> GetAll() {
-            List<Persona>       returnList = new List<Persona>();
+        public static List<PersonaDTO> GetAll() {
+            List<PersonaDTO>    returnList = new List<PersonaDTO>();
             string              strBaseAdressURL;
             HttpResponseMessage response;
 
@@ -56,7 +57,7 @@ namespace Gestion.Proxy {
 
                 response = client.GetAsync("api/v1/personas").Result; 
                 if (response.IsSuccessStatusCode) {
-                    returnList = response.Content.ReadAsAsync<List<Persona>>().Result;
+                    returnList = response.Content.ReadAsAsync<List<PersonaDTO>>().Result;
                 }
                 //client.Dispose();
             }
@@ -64,8 +65,8 @@ namespace Gestion.Proxy {
             return returnList;
         }
 
-        public static List<Persona> GetActivos() {
-            List<Persona> returnList = new List<Persona>();
+        public static List<PersonaDTO> GetActivos() {
+            List<PersonaDTO> returnList = new List<PersonaDTO>();
             string strBaseAdressURL;
             HttpResponseMessage response;
 
@@ -78,7 +79,7 @@ namespace Gestion.Proxy {
 
                 response = client.GetAsync("api/v1/personas/activos").Result;
                 if (response.IsSuccessStatusCode) {
-                    returnList = response.Content.ReadAsAsync<List<Persona>>().Result;
+                    returnList = response.Content.ReadAsAsync<List<PersonaDTO>>().Result;
                 }
                 //client.Dispose();
             }
@@ -86,8 +87,8 @@ namespace Gestion.Proxy {
             return returnList;
         }
 
-        public static List<Persona> GetInActivos() {
-            List<Persona> returnList = new List<Persona>();
+        public static List<PersonaDTO> GetInActivos() {
+            List<PersonaDTO> returnList = new List<PersonaDTO>();
             string strBaseAdressURL;
             HttpResponseMessage response;
 
@@ -100,7 +101,7 @@ namespace Gestion.Proxy {
 
                 response = client.GetAsync("api/v1/personas/inactivos").Result; 
                 if (response.IsSuccessStatusCode) {
-                    returnList = response.Content.ReadAsAsync<List<Persona>>().Result;
+                    returnList = response.Content.ReadAsAsync<List<PersonaDTO>>().Result;
                 }
                 //client.Dispose();
             }
@@ -108,7 +109,7 @@ namespace Gestion.Proxy {
             return returnList;
         }
 
-        public static ResponseProxyDTO Insert(Persona newEntity) {
+        public static ResponseProxyDTO Insert(PersonaDTO newEntity) {
             ResponseProxyDTO    returnEntity = null;
             string              strBaseAdressURL;
             ByteArrayContent    byteContent;

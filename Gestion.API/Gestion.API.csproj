@@ -103,9 +103,17 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Gestion.EntitiesDTO\Gestion.EntitiesDTO.csproj">
+      <Project>{c98bc75a-3be6-4411-a627-74c47823df61}</Project>
+      <Name>Gestion.EntitiesDTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gestion.Entities\Gestion.Entities.csproj">
       <Project>{a4a8247b-db92-4223-8fa1-9d977048ad48}</Project>
       <Name>Gestion.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gestion.Mappers\Gestion.Mappers.csproj">
+      <Project>{7edb9bd8-0fa2-40c0-8d5f-6364b10a5bff}</Project>
+      <Name>Gestion.Mappers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Gestion.Services\Gestion.Services.csproj">
       <Project>{2621870a-386e-47ff-a6b3-49eb7fe53138}</Project>

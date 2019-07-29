@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Gestion.Entities;
+using Gestion.EntitiesDTO;
 using Gestion.Proxy;
 using Gestion.Proxy.Models;
 
@@ -22,15 +22,15 @@ namespace Gestion.WindowsForm {
         }
 
         private void btnPersonasGetAll_Click(object sender, EventArgs e) {
-            List<Persona> personasList;
+            List<PersonaDTO> personasList;
 
             personasList = PersonasServiceProxy.GetAll();
             dgvPersonas.DataSource = personasList;
         }
 
         private void btnGetById_Click(object sender, EventArgs e) {
-            Persona oPersona;
-            int     intId;
+            PersonaDTO  oPersona;
+            int         intId;
             
             if (int.TryParse(txtPersonaId.Text, out intId)){
                 oPersona = PersonasServiceProxy.GetById(intId);
@@ -46,28 +46,28 @@ namespace Gestion.WindowsForm {
         }
 
         private void btnPersonasGetActivos_Click(object sender, EventArgs e) {
-            List<Persona> personasList;
+            List<PersonaDTO> personasList;
             
             personasList = PersonasServiceProxy.GetActivos();
             dgvPersonas.DataSource = personasList;
         }
 
         private void btnPersonasGetInactivos_Click(object sender, EventArgs e) {
-            List<Persona> personasList;
+            List<PersonaDTO> personasList;
             
             personasList = PersonasServiceProxy.GetInActivos();
             dgvPersonas.DataSource = personasList;
         }
 
         private void btnInsert_Click(object sender, EventArgs e) {
-            Persona             newPersona;
+            PersonaDTO          newPersona;
             ResponseProxyDTO    responseDTO;
             string              strErrores = "";
             
-            newPersona = new Persona();
-            newPersona.Nombre   = txtNombre.Text;
-            newPersona.Email    = txtEmail.Text;
-            newPersona.Activo   = chkActivo.Checked;
+            newPersona = new PersonaDTO();
+            newPersona.NombreCompleto   = txtNombre.Text;
+            newPersona.Mail             = txtEmail.Text;
+            newPersona.Activo           = chkActivo.Checked;
 
             responseDTO = PersonasServiceProxy.Insert(newPersona);
             if (responseDTO.NewId > 0) {
