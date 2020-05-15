@@ -44,8 +44,10 @@
   <ItemGroup>
     <Compile Include="Business\CustomLog.cs" />
     <Compile Include="DataAccessLayer\ClientesDAL.cs" />
+    <Compile Include="DataAccessLayer\UsuariosDAL.cs" />
     <Compile Include="DataAccessLayer\PersonasDAL.cs" />
     <Compile Include="ClientesService.cs" />
+    <Compile Include="UsuariosService.cs" />
     <Compile Include="PersonasService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

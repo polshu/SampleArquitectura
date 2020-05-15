@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -9,11 +8,11 @@ using System.Web.Mvc;
 
 using Gestion.Entities;
 using Gestion.Services;
-using Gestion.MVC.Models;
+//using Gestion.MVC.Models;
 
 namespace Gestion.MVC.Controllers {
     public class PersonasController : Controller {
-        private GestionMVCContext db = new GestionMVCContext();
+        //private GestionMVCContext db = new GestionMVCContext();
 
         // GET: Personas
         public ActionResult Index() {
@@ -62,11 +61,11 @@ namespace Gestion.MVC.Controllers {
             return View(persona);
         }
 
-        protected override void Dispose(bool disposing) {
-            if (disposing) {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing) {
+        //    if (disposing) {
+        //        db.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
     }
 }
