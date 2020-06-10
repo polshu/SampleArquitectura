@@ -1,0 +1,22 @@
+1) Comienzo con una Aplicacion de Escritorio que accede a la base de datos.
+1.1 La Aplicacion tiene 3 Tablas (Usuarios, Libros y Autores).
+1.2 Para ordenarme cree una Clase de acceso a base de datos, que como me ayuda mucho y es recotra util le puse el prefijo HELPERS.
+1.3 Como me gusta ser ordenado y pensando en el Crecimiento de la aplicacion hice una carpetita con las clases que voy a utilizar 
+    a las que le puse Entities de manera que me quede ordenadito.
+
+1.4 Y mostrando que comence a "repetir codigo" (por ejemplo) cuando quiero listar los libros, o cuando quiero mostrar un Libros, decidi encapsular 
+    la logica en clases a las que denomine Managers (que administran a cada una de las Tablas)
+
+1.5 La tunie un poco y de paso le agregue una clase para que Guarde un LOG de texto en caso de que haya Excepciones.
+-------------------------------------------------------------------------------------------------------------------
+2) Reutilizacion de Clases (Biblioteca de clases)
+2.1) Me pidieron que haga otra aplicacion en la que creo que voy a utilizar la misma clase de Acceso a Base de datos y el de LOG, ya que estan 
+buenas...
+2.2) Entonces que hago para no repetir el codigo, con todo lo malo que conlleva, y como hago cuando encuentro un BUG o quiero realizar una mejora?
+2.3) Extraje las dos clases a un nuevo Proyecto (UTILES) y los referencie desde el original.
+2.4) ahora si hice un nuevo proyecto referenciando a el proyecto de clases UTILES.
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+

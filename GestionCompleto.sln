@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion.Entities", "Gestion.Entities\Gestion.Entities.csproj", "{A4A8247B-DB92-4223-8FA1-9D977048AD48}"
 EndProject
@@ -16,6 +16,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CC390E03-B3DC-441B-BD77-CFB895592863}"
 	ProjectSection(SolutionItems) = preProject
 		Leeme.txt = Leeme.txt
+		Refactorizacion.txt = Refactorizacion.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion.API", "Gestion.API\Gestion.API.csproj", "{CBB4FAA6-564B-46A4-940A-5F09632695DE}"
