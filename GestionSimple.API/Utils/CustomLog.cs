@@ -6,16 +6,21 @@ using System.Text;
 using System.Threading.Tasks;
 
 using GestionSimple.Models;
-using GestionSimple.API.Helpers;
+using GestionSimple.Helpers;
 
-namespace GestionSimple.API.Services {
+namespace GestionSimple.Utils {
     public class CustomLog {
+        /// <summary>
+        ///     Obtengo el nombre del Archivos de LOGS (desde un archivo de configuracion!)
+        /// </summary>
+        /// <returns></returns>
         public static string GetLogFile() {
             string strReturnValue;
             strReturnValue = AppSettingsHelper.GetAppSetting("LogFile", "");
             return strReturnValue;
         }
 
+        #region LogException
         public static bool LogException(Exception ex) {
             bool blnReturnValue = false;
 
@@ -41,5 +46,6 @@ namespace GestionSimple.API.Services {
             }
             return blnReturnValue;
         }
+        #endregion
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using GestionSimple.API.Models;
+using GestionSimple.Models;
 
-namespace GestionSimple.API.Services {
+namespace GestionSimple.Services {
     public class PersonasService {
         private static PersonasDAL GetDAL() {
             return new PersonasDAL();

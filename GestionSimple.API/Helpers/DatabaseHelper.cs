@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestionSimple.API.Helpers {
+namespace GestionSimple.Helpers {
     /// <summary>
     ///     Clase que agrupa funcionalidades de acceso a Base de Datos SQL Server.
     /// </summary>

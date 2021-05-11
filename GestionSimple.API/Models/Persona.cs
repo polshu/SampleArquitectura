@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestionSimple.API.Models {
+namespace GestionSimple.Models {
     public class Persona {
         public int Id { get; set; }
 

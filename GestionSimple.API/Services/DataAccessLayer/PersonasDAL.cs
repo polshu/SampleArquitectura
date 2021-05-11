@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 using GestionSimple.Models;
-using GestionSimple.API.Helpers;
+using GestionSimple.Helpers;
 
-namespace GestionSimple.API.Services {
+namespace GestionSimple.Services {
     internal class PersonasDAL {
 
         public Persona GetById(int intId) {

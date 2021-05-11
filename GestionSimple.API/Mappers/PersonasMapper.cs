@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using GestionSimple.API.    ;
-using GestionSimple.API.EntitiesDTO;
 
-namespace GestionSimple.API.Mappers {
+using GestionSimple.Models;
+using GestionSimple.ModelsDTO;
+
+namespace GestionSimple.Mappers {
     public class PersonasMapper {
         public static PersonaDTO ToDTO(Persona source) {
             PersonaDTO returnEntity = null;

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gestion.EntitiesDTO {
+namespace GestionSimple.ModelsDTO {
     public class PersonaDTO {
         public int Id { get; set; }
 

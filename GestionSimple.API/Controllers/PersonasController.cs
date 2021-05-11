@@ -6,11 +6,12 @@ using System.Net.Http;
 using System.Web.Http;
 
 using Helpers;
-using GestionSimple.API.Models;
-using GestionSimple.API.Services;
-using GestionSimple.API.Mappers;
+using GestionSimple.Models;
+using GestionSimple.ModelsDTO;
+using GestionSimple.Services;
+using GestionSimple.Mappers;
 
-namespace GestionSimple.API.Controllers {
+namespace GestionSimple.Controllers {
     public class PersonasController : ApiController {
 
         [HttpGet]
@@ -90,7 +91,6 @@ namespace GestionSimple.API.Controllers {
                 responseDTO.Errores = strErrores;
                 respuesta = Ok(responseDTO);
             }
-
             return respuesta;
         }
 

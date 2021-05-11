@@ -5,7 +5,7 @@ using System.Web;
 
 using GestionSimple.Models;
 
-namespace GestionSimple.API.Models {
+namespace GestionSimple.ModelsDTO {
     public class ResponseDTO {
         public ResponseDTO() {
             NewId           = 0;

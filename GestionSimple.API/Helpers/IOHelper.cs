@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace GestionSimple.API.Helpers {
+namespace GestionSimple.Helpers {
     /// <summary>
     ///     Clase que agrupa funcionalidades de lectura y escritura de archivos.
     /// </summary>
